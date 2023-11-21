@@ -17,24 +17,29 @@
 
 def filter_anagrams(word='', *args):
     total = []
-    flag = True
+    ord_sum= sum([ord(i) for i in word])
+    for k in range(len(args[0])):
+        guess = sum(ord(i) for i in args[0][k])
+        if ord_sum == guess:
+            total.append(args[0][k])
+            
 
-    for i in range(len(word)):
-        for k in range(len(args)):
-            if i > len(args[i]):
-                break
-            if word[i] == args[i][k]:
-                flag = True
-            else:
-                flag = False
-                break
-        if flag == True:
-            total.append(args[i])
     return total
 
+    
 
-word = 'abba'
-anagrams = ['aabb', 'abcd', 'bbaa', 'dada']
 
-print(filter_anagrams(word, anagrams))
+print(filter_anagrams('tommarvoloriddle', ['iamlordvoldemort', 'iamdevolremort', 'mortmortmortmort', 'remortvolremort']))
+
+
+
+
+
+
+
+
+
+
+
+#Хочу спать сильно-сильно
 
