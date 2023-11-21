@@ -15,9 +15,7 @@ def is_valid(pin):
         return False
     for i in pin:
         if i not in '1234567890':
-            print(i)
             return False
     return True
 
-print(is_valid('123 45'))
     
