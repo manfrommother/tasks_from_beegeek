@@ -20,7 +20,3 @@ def get_date_range(start, end):
     
     return total
 
-date1 = date(2021, 10, 1)
-date2 = date(2021, 10, 5)
-
-print(*get_date_range(date1, date2), sep='\n')

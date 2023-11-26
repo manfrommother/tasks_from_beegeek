@@ -1,3 +1,12 @@
+'''
+Вам доступны список dates, содержащий даты, и список times, 
+содержащий времена. Количество элементов в этих списках одинаковое. 
+Дополните приведенный ниже код, чтобы он вывел datetime объекты, 
+полученные путем объединения элементов списков dates и times, 
+находящихся на одинаковых позициях. Полученные объекты должны быть расположены 
+в порядке возрастания секунд, каждый на отдельной строке.
+'''
+
 from datetime import date, time, datetime
 
 
@@ -14,6 +23,4 @@ list_datetime = []
 for i in range(len(dates)):
     list_datetime.append(datetime.combine(dates[i], times[i]))
 
-
-#for i in range(len(list_datetime)):
 print(*sorted(list_datetime, key=lambda x: x.second), sep='\n')

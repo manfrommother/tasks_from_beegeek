@@ -24,5 +24,3 @@ def convert(string):
         string = string.lower()
     return string
     
-
-print(convert('pi31415!'))

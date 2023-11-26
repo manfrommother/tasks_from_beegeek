@@ -14,5 +14,4 @@ def hide_card(card):
     return f'{stars}{new_card}'
 
 card = '1233567890123456'
-print(card)
 print(hide_card(card))

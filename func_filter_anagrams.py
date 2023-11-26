@@ -26,10 +26,6 @@ def filter_anagrams(word='', *args):
 
     return total
 
-    
-
-
-print(filter_anagrams('tommarvoloriddle', ['iamlordvoldemort', 'iamdevolremort', 'mortmortmortmort', 'remortvolremort']))
 
 
 
