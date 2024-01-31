@@ -14,9 +14,3 @@ def sandwich(func):
         return total
         
     return bread
-
-@sandwich
-def beegeek():
-    return 'beegeek'
-    
-print(beegeek())
