@@ -16,9 +16,3 @@ def exception_decorator(func):
             return (None, 'При вызове функции произошла ошибка')
         
     return inner
-
-@exception_decorator
-def f(x):
-    return x**2 + 2*x + 1
-    
-print(f(7))
