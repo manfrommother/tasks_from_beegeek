@@ -37,10 +37,4 @@ def strip_range(start, end, char='.'):
     return decorator
 
 
-@strip_range(20, 30)
-def beegeek():
-    return 'beegeek'
-    
-print(beegeek())
-
                      
