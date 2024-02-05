@@ -18,11 +18,3 @@ class PowerOf:
     def __next__(self):
         self.degree += 1
         return self.number ** self.degree
-
-
-power_of_two = PowerOf(2)
-
-print(next(power_of_two))
-print(next(power_of_two))
-print(next(power_of_two))
-print(next(power_of_two))
