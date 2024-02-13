@@ -33,6 +33,3 @@ class Pet:
     def num_of_pets(cls):
         return len(cls.name_lst)
     
-print(Pet.first_pet())
-print(Pet.last_pet())
-print(Pet.num_of_pets())

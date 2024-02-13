@@ -22,7 +22,3 @@ class Rectangle:
     def square(cls, side):
         return cls(side, side)
     
-rectangle = Rectangle.square(5)
-
-print(rectangle.length)
-print(rectangle.width)
