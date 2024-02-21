@@ -18,35 +18,16 @@ ord(obj[0]) * 1 - ord(obj[1]) * 2 + ord(obj[2]) * 3 - ord(obj[3]) * 4 + ...
 где temp1 — значение, полученное в первом шаге, temp2 — значение, полученное во втором шаге
 и возвращать значение, полученное в третьем шаге.
 '''
-
-
 def hash_function(obj):
     obj = str(obj)
-    start = 0
-    end = len(obj) - 1
-    first_step = 0
-    second_step = 0
+    temp1 = temp2 = 0
+    for i in range(len(obj) // 2):
+        temp1 += ord(obj[i]) * ord(obj[-(i + 1)])
+    if len(obj) % 2:
+        temp1 += ord(obj[len(obj) // 2])
+    for i, c in enumerate(obj, 1):
+        temp2 += ord(c) * i * ((-1) ** (i + 1))
+    return temp1 * temp2 % 123456791
 
-    while start < end:
-        first_step += ord(obj[start]) * ord(obj[end])
-        start += 1
-        end -= 1
-    if len(obj) % 2 != 0:
-        first_step += ord(obj[len(obj) // 2])
-    
-
-    counter = 1
-    for i in obj:
-        if counter % 2 != 0:
-            second_step += ord(i) * counter
-            counter += 1
-        else:
-            second_step -= ord(i) * counter
-            counter += 1
-
-    return (first_step * second_step) % 123456791
- 
-
-print(hash_function(12345))
 
         
