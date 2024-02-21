@@ -1,0 +1,40 @@
+'''
+С помощью наследования и приведенной ниже схемы 
+постройте иерархию пустых классов, 
+описывающих транспортные средства:
+
+Vehicle
+--LandVehicle
+----Car
+----Motorcycle
+----Bicycle
+--WaterVehicle
+--AirVehicle
+----Propeller
+----Jet
+'''
+
+class Vehicle:
+    pass
+
+
+class LandVehicle(Vehicle):
+    pass
+class Car(LandVehicle):
+    pass
+class Motorcycle(LandVehicle):
+    pass
+class Bicycle(LandVehicle):
+    pass
+
+
+class WaterVehicle(Vehicle):
+    pass
+
+
+class AirVehicle(Vehicle):
+    pass
+class Propeller(AirVehicle):
+    pass
+class Jet(AirVehicle):
+    pass
